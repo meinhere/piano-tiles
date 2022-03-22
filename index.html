@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Piano Tiles</title>
+  </head>
+  <body>
+    <div class="instruction">
+      <h1>Instruction</h1>
+      <ul>
+        <li>This game will be start being 3 seconds</li>
+        <li>All blok on tiles down randomly</li>
+        <li>You can press keyboard 'D', 'F', 'J', 'K' to click button</li>
+        <li>Press blok until border black to increase score</li>
+      </ul>
+    </div>
+    <button onclick="start()" id="start">Start</button>
+
+    <div class="content-game">
+      <div class="countdown">Persiapan</div>
+      <h2 class="time">0m : 0s</h2>
+      <h2 class="score">0</h2>
+
+      <div class="container">
+        <div class="tiles">
+          <div class="blok"></div>
+          <div class="trigger"></div>
+          <div class="button" id="d">D</div>
+        </div>
+        <div class="tiles">
+          <div class="blok"></div>
+          <div class="trigger"></div>
+          <div class="button" id="f">F</div>
+        </div>
+        <div class="tiles">
+          <div class="blok"></div>
+          <div class="trigger"></div>
+          <div class="button" id="j">J</div>
+        </div>
+        <div class="tiles">
+          <div class="blok"></div>
+          <div class="trigger"></div>
+          <div class="button" id="k">K</div>
+        </div>
+      </div>
+    </div>
+
+    <audio src="audio/Pop.mp3" id="pop"></audio>
+    <audio src="audio/backsound.mp3" id="backsound"></audio>
+    <script src="script.js"></script>
+  </body>
+</html>
