@@ -31,6 +31,7 @@ function fadeBlok(timeLimit) {
         clearInterval(timeCountDown);
         clearInterval(move);
         document.querySelector(".countdown").style.display = "block";
+        backsound.pause();
         time.textContent = "Timeout";
         countDown.innerHTML = "Selesai";
       }
@@ -87,6 +88,9 @@ function start() {
 
   setTimeout(() => {
     // Timer
+    let year = new Date().getFullYear();
+    const monthName = ["Jan","Feb","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"];
+    let month = monthName[new Date().getMonth()];
     let date = new Date().getDate();
     let hour = new Date().getHours();
     let minute = new Date().getMinutes() + 3; // ganti angka 3 untuk menambah waktu berapa menit
