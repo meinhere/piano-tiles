@@ -32,6 +32,7 @@ function fadeBlok(timeLimit) {
         clearInterval(move);
         document.querySelector(".countdown").style.display = "block";
         backsound.pause();
+        backsound.currentTime = 0;
         time.textContent = "Timeout";
         countDown.innerHTML = "Selesai";
       }
@@ -95,7 +96,7 @@ function start() {
     let hour = new Date().getHours();
     let minute = new Date().getMinutes() + 3; // ganti angka 3 untuk menambah waktu berapa menit
     let timeLimit = new Date(
-      "Mar " + date + ", 2022 " + hour + ":" + minute
+      month + " " + date + ", " +  year  + " " + hour + ":" + minute
     ).getTime();
 
     // Blok fade in
